@@ -5,6 +5,7 @@ const Geometer = () => {
 
 	return (
 		<div>
+			<h3 class='text-lg font-bold'>Geometer</h3>
 			{error && <p>Error: {error}</p>}
 			<p>Latitude: {latitude}</p>
 			<p>Longitude: {longitude}</p>
