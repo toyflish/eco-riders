@@ -5,7 +5,7 @@ const Index = () => (
 	<Page>
 		<Section>
 			<h2 className='text-xl font-semibold text-zinc-800 dark:text-zinc-200'>
-				&#8220;If you ride like lightning, you're gonna crash like
+				&#8220;If you ride like lightning, you&#39;re gonna crash like
 				thunder.&#8221;
 			</h2>
 
