@@ -1,15 +1,24 @@
-import { useCurrentPosition } from 'react-use-geolocation'
+import useGeolocation from 'react-hook-geolocation'
 
 const Geometer = () => {
-	const { latitude, longitude, error } = useCurrentPosition()
+	const geolocation = useGeolocation()
 
-	return (
+	return !geolocation.error ? (
 		<div>
-			<h3 class='text-lg font-bold'>Geometer</h3>
-			{error && <p>Error: {error}</p>}
-			<p>Latitude: {latitude}</p>
-			<p>Longitude: {longitude}</p>
+			<h3 className='text-lg font-bold'>Geometer</h3>
+			<ul>
+				<li>Latitude: {geolocation.latitude}</li>
+				<li>Longitude: {geolocation.longitude}</li>
+				<li>Location accuracy: {geolocation.accuracy}</li>
+				<li>Altitude: {geolocation.altitude}</li>
+				<li>Altitude accuracy: {geolocation.altitudeAccuracy}</li>
+				<li>Heading: {geolocation.heading}</li>
+				<li>Speed: {geolocation.speed}</li>
+				<li>Timestamp: {geolocation.timestamp}</li>
+			</ul>
 		</div>
+	) : (
+		<p>No geolocation, sorry.</p>
 	)
 }
 
