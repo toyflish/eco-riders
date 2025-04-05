@@ -8,3 +8,4 @@ node_modules
 **/public/workbox**
 **/public/sw**
 yarn-error.log
+.DS_Store
